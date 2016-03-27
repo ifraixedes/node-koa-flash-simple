@@ -38,5 +38,8 @@
     "mocha": "^2.4.5",
     "nyc": "^6.1.1",
     "supertest": "^1.2.0"
+  },
+  "dependencies": {
+    "debug": "^2.2.0"
   }
 }
