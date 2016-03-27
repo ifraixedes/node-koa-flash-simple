@@ -97,17 +97,22 @@ describe('Flash', () => {
       let data = ctx.flash.get()
 
       if (data) {
-        ctx.body = data
-        ctx.status = 200
-        return
+        //Emulate asynchronous operation
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            ctx.body = data
+            ctx.status = 200
+            resolve()
+          }, 10)
+        })
       }
 
-      next()
+      return next()
     }
 
     function setFlashData(ctx, next) {
       ctx.flash.set(data)
-      next()
+      return next()
     }
 
     function redirectOnSecond() {
@@ -121,7 +126,7 @@ describe('Flash', () => {
           return
         }
 
-        next()
+        return next()
       }
     }
 
