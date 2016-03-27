@@ -1,12 +1,16 @@
 {
-  "name": "@ifraixedes/koa-flash",
+  "name": "koa-flash-simple",
   "version": "0.0.1",
-  "description": "Flash messages for Koa v2 web framework",
+  "description": "Simple and opinionated flash messages middleware for Koa v2 web framework",
   "main": "lib",
   "scripts": {
     "lint": "eslint --cache lib test",
     "test": "mocha",
     "test-cov": "nyc node_modules/mocha/bin/_mocha && nyc report --reporter=lcov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ifraixedes/node-koa-flash"
   },
   "keywords": [
     "koa",
