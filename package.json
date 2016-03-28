@@ -1,6 +1,6 @@
 {
   "name": "koa-flash-simple",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Stupidly simple flash messages middleware for Koa v2 web framework",
   "main": "lib",
   "scripts": {
