@@ -97,7 +97,7 @@ describe('Flash', () => {
       let data = ctx.flash.get()
 
       if (data) {
-        //Emulate asynchronous operation
+        // Emulate asynchronous operation
         return new Promise((resolve, reject) => {
           setTimeout(() => {
             ctx.body = data
