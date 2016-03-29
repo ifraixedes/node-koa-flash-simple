@@ -86,6 +86,7 @@ Notice I've created this middleware because I wanted to have a stupidly simple f
 * Set the whole data one place. I feel that is quite confusing having multiple middlewares setting data on it, if that's it needed pass data between them in other property and set all of that in the last one.
 * Set data don't have any format, just set what you want and establish the conventions based in your needs; if you have to enforce, then you should find the way.
 * Redirections count as an usual request; if you have to redirect a previous route, when you do the redirect because you're deprecating, refactoring or whatever, you should do the `get` and `set` too, not just only the redirection.
+* Don't check if `ctx.session` exist on each request, session must exist, otherwise a a corresponding middleware haven't been set before `koa-flash-simple` or there is a bug; I want a crash in this case to detect the issue as soon as possible during the development.
 
 Although my previous mentioned expectations and the tiny and simple functionality of this middleware I know that I may miss something so, new ideas with follow this principles are welcome, please open an issue to discuss and, of course the same for any bug or issue that you find.
 
